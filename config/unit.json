@@ -13,7 +13,10 @@
       "working_directory": "/app/web",
       "root": "/app/web",
       "index": "index.php",
-      "script": "index.php"
+      "script": "index.php",
+      "environment": {
+          "APP_DEBUG": "0"
+      }
     }
   }
 }

@@ -13,10 +13,10 @@
 ## Versions
  component    | version
 ------------- | -------
-Alpine Linux  | `3.8`
-PHP           | `7.2`
-Composer      | `1.8.4`
-Satisfy       | `3.0.4`
+Alpine Linux  | `3.14`
+PHP           | `7.4`
+Composer      | `2.1.12`
+Satisfy       | `3.3.0`
 
 
 ## Build and Run
@@ -25,7 +25,7 @@ docker build -t satisfy .
 docker run -d --rm \
            --name satisfy \
            -e SSH_PRIVATE_KEY="$(<./id_rsa)" \
-           -p 8080:8080 \
+           -p 8080:80 \
            satisfy
 ```
 
@@ -35,8 +35,8 @@ docker run -d --rm \
            --name satisfy \
            -e SSH_PRIVATE_KEY="$(<./id_rsa)" \
            -e CRON_SYNC_EVERY=120 \
-           -p 8080:8080 \
-           anapsix/satisfy
+           -p 8080:80 \
+           kilylabs/satisfy
 ```
 
 ## Launch options

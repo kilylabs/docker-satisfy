@@ -7,7 +7,7 @@ set -u
 : ${APP_USER:?must be set}
 
 APP_USER_HOME="$(awk -F: -v user="${APP_USER}" '$1==user {print $6}' /etc/passwd)"
-SATIS_FILE="${APP_ROOT}/satis.json"
+SATIS_FILE="${APP_ROOT}/data/satis.json"
 
 > ${APP_USER_HOME}/.ssh/known_hosts
 chown ${APP_USER}:${APP_USER} ${APP_USER_HOME}/.ssh/known_hosts
